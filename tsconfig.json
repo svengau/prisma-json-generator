@@ -2,7 +2,9 @@
   "compilerOptions": {
     "target": "ES2018",
     "module": "commonjs",
-    "lib": ["esnext"],
+    "lib": [
+      "esnext"
+    ],
     "strict": true,
     "strictPropertyInitialization": false,
     "esModuleInterop": true,
@@ -18,6 +20,25 @@
     "rootDir": "./src",
     "newLine": "lf"
   },
-  "include": ["src/**/*"],
-  "exclude": ["**/node_modules", "**/*.test.ts", "**/__tests__", "**/dest"]
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "**/node_modules",
+    "**/*.test.ts",
+    "**/__tests__",
+    "**/dest"
+  ],
+  "watchOptions": {
+    // Use native file system events for files and directories
+    "watchFile": "useFsEvents",
+    "watchDirectory": "useFsEvents",
+    // Poll files for updates more frequently
+    // when they're updated a lot.
+    "fallbackPolling": "dynamicPriority",
+    // Don't coalesce watch notification
+    "synchronousWatchDirectory": true,
+    // Finally, two additional settings for reducing the amount of possible
+    // files to track  work from these directories
+  }
 }

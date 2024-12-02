@@ -13,6 +13,7 @@
   },
   "scripts": {
     "build": "npx tsc",
+    "watch": "npx tsc --watch",
     "prepack": "pnpm build",
     "test": "vitest run",
     "test:watch": "vitest",

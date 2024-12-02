@@ -1,0 +1,888 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`handler > generates ts file 1`] = `
+[
+  [
+    "./schema.ts",
+    "
+// auto-generated file (do not edit)
+import { type Prisma } from "@prisma/client";
+
+export type PrismaFieldEnhanced = Prisma.DMMF.Field & { attributes: string[] };
+
+export default {
+  types: {},
+  enums: {
+    Enum: {
+      name: 'Enum',
+      values: [
+        { name: 'A', dbName: null },
+        { name: 'B', dbName: null },
+        { name: 'C', dbName: null }
+      ],
+      dbName: null,
+      raw: 'enum Enum {\\n  A\\n  B\\n  C\\n}'
+    }
+  },
+  models: {
+    User: {
+      name: 'User',
+      dbName: null,
+      fields: {
+        id: {
+          name: 'id',
+          kind: 'scalar',
+          isList: false,
+          isRequired: true,
+          isUnique: false,
+          isId: true,
+          isReadOnly: false,
+          hasDefaultValue: true,
+          type: 'String',
+          default: { name: 'cuid', args: [] },
+          isGenerated: false,
+          isUpdatedAt: false,
+          comment: undefined,
+          attributes: [ '@id', '@default(cuid())' ]
+        },
+        email: {
+          name: 'email',
+          kind: 'scalar',
+          isList: false,
+          isRequired: true,
+          isUnique: false,
+          isId: false,
+          isReadOnly: false,
+          hasDefaultValue: false,
+          type: 'String',
+          isGenerated: false,
+          isUpdatedAt: false,
+          comment: undefined,
+          attributes: []
+        },
+        stringWithDefault: {
+          name: 'stringWithDefault',
+          kind: 'scalar',
+          isList: false,
+          isRequired: true,
+          isUnique: false,
+          isId: false,
+          isReadOnly: false,
+          hasDefaultValue: true,
+          type: 'String',
+          default: 'default',
+          isGenerated: false,
+          isUpdatedAt: false,
+          comment: undefined,
+          attributes: [ '@default("default")' ]
+        },
+        nullableString: {
+          name: 'nullableString',
+          kind: 'scalar',
+          isList: false,
+          isRequired: false,
+          isUnique: false,
+          isId: false,
+          isReadOnly: false,
+          hasDefaultValue: false,
+          type: 'String',
+          isGenerated: false,
+          isUpdatedAt: false,
+          comment: undefined,
+          attributes: []
+        },
+        boolean: {
+          name: 'boolean',
+          kind: 'scalar',
+          isList: false,
+          isRequired: true,
+          isUnique: false,
+          isId: false,
+          isReadOnly: false,
+          hasDefaultValue: false,
+          type: 'Boolean',
+          isGenerated: false,
+          isUpdatedAt: false,
+          comment: undefined,
+          attributes: []
+        },
+        booleanWithDefault: {
+          name: 'booleanWithDefault',
+          kind: 'scalar',
+          isList: false,
+          isRequired: true,
+          isUnique: false,
+          isId: false,
+          isReadOnly: false,
+          hasDefaultValue: true,
+          type: 'Boolean',
+          default: true,
+          isGenerated: false,
+          isUpdatedAt: false,
+          comment: undefined,
+          attributes: [ '@default(true)' ]
+        },
+        nullableBoolean: {
+          name: 'nullableBoolean',
+          kind: 'scalar',
+          isList: false,
+          isRequired: false,
+          isUnique: false,
+          isId: false,
+          isReadOnly: false,
+          hasDefaultValue: false,
+          type: 'Boolean',
+          isGenerated: false,
+          isUpdatedAt: false,
+          comment: undefined,
+          attributes: []
+        },
+        int: {
+          name: 'int',
+          kind: 'scalar',
+          isList: false,
+          isRequired: true,
+          isUnique: false,
+          isId: false,
+          isReadOnly: false,
+          hasDefaultValue: false,
+          type: 'Int',
+          isGenerated: false,
+          isUpdatedAt: false,
+          comment: undefined,
+          attributes: []
+        },
+        intWithDefault: {
+          name: 'intWithDefault',
+          kind: 'scalar',
+          isList: false,
+          isRequired: true,
+          isUnique: false,
+          isId: false,
+          isReadOnly: false,
+          hasDefaultValue: true,
+          type: 'Int',
+          default: 1,
+          isGenerated: false,
+          isUpdatedAt: false,
+          comment: undefined,
+          attributes: [ '@default(1)' ]
+        },
+        nullableInt: {
+          name: 'nullableInt',
+          kind: 'scalar',
+          isList: false,
+          isRequired: false,
+          isUnique: false,
+          isId: false,
+          isReadOnly: false,
+          hasDefaultValue: false,
+          type: 'Int',
+          isGenerated: false,
+          isUpdatedAt: false,
+          comment: undefined,
+          attributes: []
+        },
+        bigInt: {
+          name: 'bigInt',
+          kind: 'scalar',
+          isList: false,
+          isRequired: true,
+          isUnique: false,
+          isId: false,
+          isReadOnly: false,
+          hasDefaultValue: false,
+          type: 'BigInt',
+          isGenerated: false,
+          isUpdatedAt: false,
+          comment: undefined,
+          attributes: []
+        },
+        bigIntWithDefault: {
+          name: 'bigIntWithDefault',
+          kind: 'scalar',
+          isList: false,
+          isRequired: true,
+          isUnique: false,
+          isId: false,
+          isReadOnly: false,
+          hasDefaultValue: true,
+          type: 'BigInt',
+          default: '1',
+          isGenerated: false,
+          isUpdatedAt: false,
+          comment: undefined,
+          attributes: [ '@default(1)' ]
+        },
+        nullableBigInt: {
+          name: 'nullableBigInt',
+          kind: 'scalar',
+          isList: false,
+          isRequired: false,
+          isUnique: false,
+          isId: false,
+          isReadOnly: false,
+          hasDefaultValue: false,
+          type: 'BigInt',
+          isGenerated: false,
+          isUpdatedAt: false,
+          comment: undefined,
+          attributes: []
+        },
+        float: {
+          name: 'float',
+          kind: 'scalar',
+          isList: false,
+          isRequired: true,
+          isUnique: false,
+          isId: false,
+          isReadOnly: false,
+          hasDefaultValue: false,
+          type: 'Float',
+          isGenerated: false,
+          isUpdatedAt: false,
+          comment: undefined,
+          attributes: []
+        },
+        floatWithDefault: {
+          name: 'floatWithDefault',
+          kind: 'scalar',
+          isList: false,
+          isRequired: true,
+          isUnique: false,
+          isId: false,
+          isReadOnly: false,
+          hasDefaultValue: true,
+          type: 'Float',
+          default: 1.1,
+          isGenerated: false,
+          isUpdatedAt: false,
+          comment: undefined,
+          attributes: [ '@default(1)' ]
+        },
+        nullableFloat: {
+          name: 'nullableFloat',
+          kind: 'scalar',
+          isList: false,
+          isRequired: false,
+          isUnique: false,
+          isId: false,
+          isReadOnly: false,
+          hasDefaultValue: false,
+          type: 'Float',
+          isGenerated: false,
+          isUpdatedAt: false,
+          comment: undefined,
+          attributes: []
+        },
+        decimal: {
+          name: 'decimal',
+          kind: 'scalar',
+          isList: false,
+          isRequired: true,
+          isUnique: false,
+          isId: false,
+          isReadOnly: false,
+          hasDefaultValue: false,
+          type: 'Decimal',
+          isGenerated: false,
+          isUpdatedAt: false,
+          comment: undefined,
+          attributes: []
+        },
+        decimalWithDefault: {
+          name: 'decimalWithDefault',
+          kind: 'scalar',
+          isList: false,
+          isRequired: true,
+          isUnique: false,
+          isId: false,
+          isReadOnly: false,
+          hasDefaultValue: true,
+          type: 'Decimal',
+          default: 1.23,
+          isGenerated: false,
+          isUpdatedAt: false,
+          comment: undefined,
+          attributes: [ '@default(1)' ]
+        },
+        nullableDecimal: {
+          name: 'nullableDecimal',
+          kind: 'scalar',
+          isList: false,
+          isRequired: false,
+          isUnique: false,
+          isId: false,
+          isReadOnly: false,
+          hasDefaultValue: false,
+          type: 'Decimal',
+          isGenerated: false,
+          isUpdatedAt: false,
+          comment: undefined,
+          attributes: []
+        },
+        dateTime: {
+          name: 'dateTime',
+          kind: 'scalar',
+          isList: false,
+          isRequired: true,
+          isUnique: false,
+          isId: false,
+          isReadOnly: false,
+          hasDefaultValue: false,
+          type: 'DateTime',
+          isGenerated: false,
+          isUpdatedAt: false,
+          comment: undefined,
+          attributes: []
+        },
+        dateTimeWithDefault: {
+          name: 'dateTimeWithDefault',
+          kind: 'scalar',
+          isList: false,
+          isRequired: true,
+          isUnique: false,
+          isId: false,
+          isReadOnly: false,
+          hasDefaultValue: true,
+          type: 'DateTime',
+          default: { name: 'now', args: [] },
+          isGenerated: false,
+          isUpdatedAt: false,
+          comment: undefined,
+          attributes: [ '@default(now())' ]
+        },
+        nullableDateTime: {
+          name: 'nullableDateTime',
+          kind: 'scalar',
+          isList: false,
+          isRequired: false,
+          isUnique: false,
+          isId: false,
+          isReadOnly: false,
+          hasDefaultValue: false,
+          type: 'DateTime',
+          isGenerated: false,
+          isUpdatedAt: false,
+          comment: undefined,
+          attributes: []
+        },
+        stringArray: {
+          name: 'stringArray',
+          kind: 'scalar',
+          isList: true,
+          isRequired: true,
+          isUnique: false,
+          isId: false,
+          isReadOnly: false,
+          hasDefaultValue: false,
+          type: 'String',
+          isGenerated: false,
+          isUpdatedAt: false,
+          comment: undefined,
+          attributes: []
+        },
+        intArray: {
+          name: 'intArray',
+          kind: 'scalar',
+          isList: true,
+          isRequired: true,
+          isUnique: false,
+          isId: false,
+          isReadOnly: false,
+          hasDefaultValue: false,
+          type: 'Int',
+          isGenerated: false,
+          isUpdatedAt: false,
+          comment: undefined,
+          attributes: []
+        },
+        bigIntArray: {
+          name: 'bigIntArray',
+          kind: 'scalar',
+          isList: true,
+          isRequired: true,
+          isUnique: false,
+          isId: false,
+          isReadOnly: false,
+          hasDefaultValue: false,
+          type: 'BigInt',
+          isGenerated: false,
+          isUpdatedAt: false,
+          comment: undefined,
+          attributes: []
+        },
+        floatArray: {
+          name: 'floatArray',
+          kind: 'scalar',
+          isList: true,
+          isRequired: true,
+          isUnique: false,
+          isId: false,
+          isReadOnly: false,
+          hasDefaultValue: false,
+          type: 'Float',
+          isGenerated: false,
+          isUpdatedAt: false,
+          comment: undefined,
+          attributes: []
+        },
+        booleanArray: {
+          name: 'booleanArray',
+          kind: 'scalar',
+          isList: true,
+          isRequired: true,
+          isUnique: false,
+          isId: false,
+          isReadOnly: false,
+          hasDefaultValue: false,
+          type: 'Boolean',
+          isGenerated: false,
+          isUpdatedAt: false,
+          comment: undefined,
+          attributes: []
+        },
+        dateTimeArray: {
+          name: 'dateTimeArray',
+          kind: 'scalar',
+          isList: true,
+          isRequired: true,
+          isUnique: false,
+          isId: false,
+          isReadOnly: false,
+          hasDefaultValue: false,
+          type: 'DateTime',
+          isGenerated: false,
+          isUpdatedAt: false,
+          comment: undefined,
+          attributes: []
+        },
+        json: {
+          name: 'json',
+          kind: 'scalar',
+          isList: false,
+          isRequired: true,
+          isUnique: false,
+          isId: false,
+          isReadOnly: false,
+          hasDefaultValue: false,
+          type: 'Json',
+          isGenerated: false,
+          isUpdatedAt: false,
+          comment: undefined,
+          attributes: []
+        },
+        jsonWithDefault: {
+          name: 'jsonWithDefault',
+          kind: 'scalar',
+          isList: false,
+          isRequired: true,
+          isUnique: false,
+          isId: false,
+          isReadOnly: false,
+          hasDefaultValue: true,
+          type: 'Json',
+          default: '{}',
+          isGenerated: false,
+          isUpdatedAt: false,
+          comment: undefined,
+          attributes: [ '@default("{}")' ]
+        },
+        nullableJson: {
+          name: 'nullableJson',
+          kind: 'scalar',
+          isList: false,
+          isRequired: false,
+          isUnique: false,
+          isId: false,
+          isReadOnly: false,
+          hasDefaultValue: false,
+          type: 'Json',
+          isGenerated: false,
+          isUpdatedAt: false,
+          comment: undefined,
+          attributes: []
+        },
+        enum: {
+          name: 'enum',
+          kind: 'enum',
+          isList: false,
+          isRequired: true,
+          isUnique: false,
+          isId: false,
+          isReadOnly: false,
+          hasDefaultValue: false,
+          type: 'Enum',
+          isGenerated: false,
+          isUpdatedAt: false,
+          comment: undefined,
+          attributes: []
+        },
+        enumWithDefault: {
+          name: 'enumWithDefault',
+          kind: 'enum',
+          isList: false,
+          isRequired: true,
+          isUnique: false,
+          isId: false,
+          isReadOnly: false,
+          hasDefaultValue: true,
+          type: 'Enum',
+          default: 'A',
+          isGenerated: false,
+          isUpdatedAt: false,
+          comment: undefined,
+          attributes: [ '@default(A)' ]
+        },
+        nullableEnum: {
+          name: 'nullableEnum',
+          kind: 'enum',
+          isList: false,
+          isRequired: false,
+          isUnique: false,
+          isId: false,
+          isReadOnly: false,
+          hasDefaultValue: false,
+          type: 'Enum',
+          isGenerated: false,
+          isUpdatedAt: false,
+          comment: undefined,
+          attributes: []
+        },
+        relation: {
+          name: 'relation',
+          kind: 'object',
+          isList: false,
+          isRequired: false,
+          isUnique: false,
+          isId: false,
+          isReadOnly: false,
+          hasDefaultValue: false,
+          type: 'UserRelation',
+          relationName: 'UserRelationToUser1',
+          relationFromFields: [],
+          relationToFields: [],
+          isGenerated: false,
+          isUpdatedAt: false,
+          comment: undefined,
+          attributes: [ '@relation(name: "UserRelationToUser1")' ]
+        },
+        relation2: {
+          name: 'relation2',
+          kind: 'object',
+          isList: false,
+          isRequired: false,
+          isUnique: false,
+          isId: false,
+          isReadOnly: false,
+          hasDefaultValue: false,
+          type: 'UserRelation',
+          relationName: 'UserRelationToUser2',
+          relationFromFields: [],
+          relationToFields: [],
+          isGenerated: false,
+          isUpdatedAt: false,
+          comment: undefined,
+          attributes: [ '@relation(name: "UserRelationToUser2")' ]
+        },
+        enums: {
+          name: 'enums',
+          kind: 'enum',
+          isList: true,
+          isRequired: true,
+          isUnique: false,
+          isId: false,
+          isReadOnly: false,
+          hasDefaultValue: false,
+          type: 'Enum',
+          isGenerated: false,
+          isUpdatedAt: false,
+          comment: undefined,
+          attributes: []
+        },
+        enumsWithDefault: {
+          name: 'enumsWithDefault',
+          kind: 'enum',
+          isList: true,
+          isRequired: true,
+          isUnique: false,
+          isId: false,
+          isReadOnly: false,
+          hasDefaultValue: true,
+          type: 'Enum',
+          default: [ 'A', 'B' ],
+          isGenerated: false,
+          isUpdatedAt: false,
+          comment: undefined,
+          attributes: [ '@default([A, B])' ]
+        }
+      },
+      primaryKey: null,
+      uniqueFields: [],
+      uniqueIndexes: [],
+      isGenerated: false,
+      attributes: [],
+      raw: 'model User {\\n' +
+        '  id String @id @default(cuid())\\n' +
+        '  email String\\n' +
+        '  stringWithDefault String @default("default")\\n' +
+        '  nullableString String?\\n' +
+        '  boolean Boolean\\n' +
+        '  booleanWithDefault Boolean @default(true)\\n' +
+        '  nullableBoolean Boolean?\\n' +
+        '  int Int\\n' +
+        '  intWithDefault Int @default(1)\\n' +
+        '  nullableInt Int?\\n' +
+        '  bigInt BigInt\\n' +
+        '  bigIntWithDefault BigInt @default(1)\\n' +
+        '  nullableBigInt BigInt?\\n' +
+        '  float Float\\n' +
+        '  floatWithDefault Float @default(1)\\n' +
+        '  nullableFloat Float?\\n' +
+        '  decimal Decimal\\n' +
+        '  decimalWithDefault Decimal @default(1)\\n' +
+        '  nullableDecimal Decimal?\\n' +
+        '  dateTime DateTime\\n' +
+        '  dateTimeWithDefault DateTime @default(now())\\n' +
+        '  nullableDateTime DateTime?\\n' +
+        '  stringArray String[]\\n' +
+        '  intArray Int[]\\n' +
+        '  bigIntArray BigInt[]\\n' +
+        '  floatArray Float[]\\n' +
+        '  booleanArray Boolean[]\\n' +
+        '  dateTimeArray DateTime[]\\n' +
+        '  json Json\\n' +
+        '  jsonWithDefault Json @default("{}")\\n' +
+        '  nullableJson Json?\\n' +
+        '  enum Enum\\n' +
+        '  enumWithDefault Enum @default(A)\\n' +
+        '  nullableEnum Enum?\\n' +
+        '  relation UserRelation? @relation(name: "UserRelationToUser1")\\n' +
+        '  relation2 UserRelation? @relation(name: "UserRelationToUser2")\\n' +
+        '  enums Enum[]\\n' +
+        '  enumsWithDefault Enum[] @default([A, B])\\n' +
+        '}'
+    },
+    User2: {
+      name: 'User2',
+      dbName: null,
+      fields: {
+        id: {
+          name: 'id',
+          kind: 'scalar',
+          isList: false,
+          isRequired: true,
+          isUnique: false,
+          isId: true,
+          isReadOnly: false,
+          hasDefaultValue: true,
+          type: 'Int',
+          default: { name: 'autoincrement', args: [] },
+          isGenerated: false,
+          isUpdatedAt: false,
+          comment: undefined,
+          attributes: [ '@id', '@default(autoincrement())' ]
+        },
+        User2Relation: {
+          name: 'User2Relation',
+          kind: 'object',
+          isList: false,
+          isRequired: false,
+          isUnique: false,
+          isId: false,
+          isReadOnly: false,
+          hasDefaultValue: false,
+          type: 'User2Relation',
+          relationName: 'User2ToUser2Relation',
+          relationFromFields: [],
+          relationToFields: [],
+          isGenerated: false,
+          isUpdatedAt: false,
+          comment: undefined,
+          attributes: []
+        }
+      },
+      primaryKey: null,
+      uniqueFields: [],
+      uniqueIndexes: [],
+      isGenerated: false,
+      attributes: [],
+      raw: 'model User2 {\\n' +
+        '  id Int @id @default(autoincrement())\\n' +
+        '  User2Relation User2Relation?\\n' +
+        '}'
+    },
+    UserRelation: {
+      name: 'UserRelation',
+      dbName: null,
+      fields: {
+        id: {
+          name: 'id',
+          kind: 'scalar',
+          isList: false,
+          isRequired: true,
+          isUnique: false,
+          isId: true,
+          isReadOnly: false,
+          hasDefaultValue: true,
+          type: 'String',
+          default: { name: 'cuid', args: [] },
+          isGenerated: false,
+          isUpdatedAt: false,
+          comment: undefined,
+          attributes: [ '@id', '@default(cuid())' ]
+        },
+        userId: {
+          name: 'userId',
+          kind: 'scalar',
+          isList: false,
+          isRequired: true,
+          isUnique: true,
+          isId: false,
+          isReadOnly: true,
+          hasDefaultValue: false,
+          type: 'String',
+          isGenerated: false,
+          isUpdatedAt: false,
+          comment: undefined,
+          attributes: [ '@unique' ]
+        },
+        user: {
+          name: 'user',
+          kind: 'object',
+          isList: false,
+          isRequired: true,
+          isUnique: false,
+          isId: false,
+          isReadOnly: false,
+          hasDefaultValue: false,
+          type: 'User',
+          relationName: 'UserRelationToUser1',
+          relationFromFields: [ 'userId' ],
+          relationToFields: [ 'id' ],
+          isGenerated: false,
+          isUpdatedAt: false,
+          comment: undefined,
+          attributes: [
+            '@relation(fields: [userId], references: [id], name: "UserRelationToUser1")'
+          ]
+        },
+        userId2: {
+          name: 'userId2',
+          kind: 'scalar',
+          isList: false,
+          isRequired: true,
+          isUnique: true,
+          isId: false,
+          isReadOnly: true,
+          hasDefaultValue: false,
+          type: 'String',
+          isGenerated: false,
+          isUpdatedAt: false,
+          comment: undefined,
+          attributes: [ '@unique' ]
+        },
+        user2: {
+          name: 'user2',
+          kind: 'object',
+          isList: false,
+          isRequired: true,
+          isUnique: false,
+          isId: false,
+          isReadOnly: false,
+          hasDefaultValue: false,
+          type: 'User',
+          relationName: 'UserRelationToUser2',
+          relationFromFields: [ 'userId2' ],
+          relationToFields: [ 'id' ],
+          isGenerated: false,
+          isUpdatedAt: false,
+          comment: undefined,
+          attributes: [
+            '@relation(fields: [userId2], references: [id], name: "UserRelationToUser2")'
+          ]
+        }
+      },
+      primaryKey: null,
+      uniqueFields: [],
+      uniqueIndexes: [],
+      isGenerated: false,
+      attributes: [],
+      raw: 'model UserRelation {\\n' +
+        '  id String @id @default(cuid())\\n' +
+        '  userId String @unique\\n' +
+        '  user User @relation(fields: [userId], references: [id], name: "UserRelationToUser1")\\n' +
+        '  userId2 String @unique\\n' +
+        '  user2 User @relation(fields: [userId2], references: [id], name: "UserRelationToUser2")\\n' +
+        '}'
+    },
+    User2Relation: {
+      name: 'User2Relation',
+      dbName: null,
+      fields: {
+        id: {
+          name: 'id',
+          kind: 'scalar',
+          isList: false,
+          isRequired: true,
+          isUnique: false,
+          isId: true,
+          isReadOnly: false,
+          hasDefaultValue: true,
+          type: 'String',
+          default: { name: 'cuid', args: [] },
+          isGenerated: false,
+          isUpdatedAt: false,
+          comment: undefined,
+          attributes: [ '@id', '@default(cuid())' ]
+        },
+        user2Id: {
+          name: 'user2Id',
+          kind: 'scalar',
+          isList: false,
+          isRequired: true,
+          isUnique: true,
+          isId: false,
+          isReadOnly: true,
+          hasDefaultValue: false,
+          type: 'Int',
+          isGenerated: false,
+          isUpdatedAt: false,
+          comment: undefined,
+          attributes: [ '@unique' ]
+        },
+        user: {
+          name: 'user',
+          kind: 'object',
+          isList: false,
+          isRequired: true,
+          isUnique: false,
+          isId: false,
+          isReadOnly: false,
+          hasDefaultValue: false,
+          type: 'User2',
+          relationName: 'User2ToUser2Relation',
+          relationFromFields: [ 'user2Id' ],
+          relationToFields: [ 'id' ],
+          isGenerated: false,
+          isUpdatedAt: false,
+          comment: undefined,
+          attributes: [ '@relation(fields: [user2Id], references: [id])' ]
+        }
+      },
+      primaryKey: null,
+      uniqueFields: [],
+      uniqueIndexes: [],
+      isGenerated: false,
+      attributes: [],
+      raw: 'model User2Relation {\\n' +
+        '  id String @id @default(cuid())\\n' +
+        '  user2Id Int @unique\\n' +
+        '  user User2 @relation(fields: [user2Id], references: [id])\\n' +
+        '}'
+    }
+  }
+}",
+  ],
+]
+`;
