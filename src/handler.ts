@@ -18,7 +18,6 @@ const handler: Handler = {
     const { output, config } = options.generator;
     const sortByName = config.sortByName === 'true';
     const includeRaw = config.includeRaw === 'true';
-    console.log(options.generator);
     const outputFilePath = parseEnvValue(output!);
     const extension = path.extname(outputFilePath);
     if (!['.ts', '.js', '.json'].includes(extension)) {
