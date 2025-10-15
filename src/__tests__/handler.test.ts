@@ -23,6 +23,7 @@ describe('handler', () => {
       generator: {
         name: 'json',
         provider: { fromEnvVar: null, value: 'prisma-json-generator' },
+        sourceFilePath: '',
         output: {
           value: './schema.ts',
           fromEnvVar: 'null',

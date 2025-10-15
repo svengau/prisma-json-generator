@@ -1,5 +1,5 @@
 import { formatAst, parsePrismaSchema } from '@loancrate/prisma-schema-parser';
-import { generatorHandler, GeneratorOptions } from '@prisma/generator-helper';
+import {  GeneratorOptions } from '@prisma/generator-helper';
 import { Handler } from '@prisma/generator-helper/dist/generatorHandler';
 import { parseEnvValue } from '@prisma/internals';
 import { mkdir, writeFile } from 'fs/promises';
@@ -11,7 +11,6 @@ const handler: Handler = {
     return {
       version: '1',
       defaultOutput: './schema.ts',
-      requiresGenerators: ['prisma-client-js'],
     };
   },
   async onGenerate(options: GeneratorOptions) {
@@ -91,6 +90,10 @@ const handler: Handler = {
         }, {} as any),
         enums: datamodel.enums.reduce((acc, e) => {
           acc[e.name] = e;
+          return acc;
+        }, {} as any),
+        indexes: datamodel.indexes.reduce((acc, i) => {
+          acc[i.name as string] = i;
           return acc;
         }, {} as any),
         models: datamodel.models.reduce((acc, m) => {

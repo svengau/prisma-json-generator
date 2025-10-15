@@ -24,6 +24,14 @@ export default {
       raw: 'enum Enum {\\n  A\\n  B\\n  C\\n}'
     }
   },
+  indexes: {
+    undefined: {
+      model: 'User2Relation',
+      type: 'unique',
+      isDefinedOnField: true,
+      fields: [ { name: 'user2Id' } ]
+    }
+  },
   models: {
     User: {
       name: 'User',
