@@ -1,7 +1,7 @@
 {
   "name": "prisma-json-generator",
   "description": "Expose the Prisma schema as JSON, including comments and annotations",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "author": "Sven Gaubert <svengau@gmail.com>",
   "main": "dist/generator.js",
   "license": "MIT",
