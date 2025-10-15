@@ -1,5 +1,7 @@
 
 
+## [0.1.4](https://github.com/svengau/prisma-json-generator/compare/v0.1.3...v0.1.4) (2025-10-15)
+
 ## [0.1.3](https://github.com/svengau/prisma-json-generator/compare/v0.1.2...v0.1.3) (2025-10-15)
 
 
