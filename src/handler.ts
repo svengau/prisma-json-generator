@@ -117,14 +117,14 @@ const handler: Handler = {
         ? JSON.stringify(datamodel, null, 2)
         : extension === '.ts'
           ? `
-// auto-generated file (do not edit)
+// auto-generated file using prisma-json-generator (do not edit)
 import { type Prisma } from "@prisma/client";
 
 export type PrismaFieldEnhanced = Prisma.DMMF.Field & { attributes: string[] };
 
 export default ${util.inspect(datamodel, { depth: 10, showHidden: false, maxArrayLength: Infinity })}`
           : `
-// auto-generated file (do not edit)
+// auto-generated file using prisma-json-generator (do not edit)
 module.exports = ${util.inspect(datamodel, { depth: 10, showHidden: false, maxArrayLength: Infinity })}`,
     );
   },
