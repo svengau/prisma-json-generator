@@ -118,9 +118,9 @@ const handler: Handler = {
         : extension === '.ts'
           ? `
 // auto-generated file using prisma-json-generator (do not edit)
-import { type Prisma } from "@prisma/client";
+import * as runtime from "@prisma/client/runtime/library"
 
-export type PrismaFieldEnhanced = Prisma.DMMF.Field & { attributes: string[] };
+export type PrismaFieldEnhanced = runtime.DMMF.Field & { attributes: string[] };
 
 export default ${util.inspect(datamodel, { depth: 10, showHidden: false, maxArrayLength: Infinity })}`
           : `
