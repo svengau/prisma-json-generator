@@ -1,5 +1,5 @@
 import { formatAst, parsePrismaSchema } from '@loancrate/prisma-schema-parser';
-import {  GeneratorOptions } from '@prisma/generator-helper';
+import { GeneratorOptions } from '@prisma/generator-helper';
 import { Handler } from '@prisma/generator-helper/dist/generatorHandler';
 import { parseEnvValue } from '@prisma/internals';
 import { mkdir, writeFile } from 'fs/promises';
@@ -122,10 +122,10 @@ import { type Prisma } from "@prisma/client";
 
 export type PrismaFieldEnhanced = Prisma.DMMF.Field & { attributes: string[] };
 
-export default ${util.inspect(datamodel, false, 10)}`
+export default ${util.inspect(datamodel, { depth: 10, showHidden: false, maxArrayLength: Infinity })}`
           : `
 // auto-generated file (do not edit)
-module.exports = ${util.inspect(datamodel, false, 10)}`,
+module.exports = ${util.inspect(datamodel, { depth: 10, showHidden: false, maxArrayLength: Infinity })}`,
     );
   },
 };
